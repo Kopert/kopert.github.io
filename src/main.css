@@ -41,22 +41,23 @@ body {
 
 .tagline {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-text);
     margin-top: 0.5rem;
 }
 
 .logo-circle {
-    width: 128px;
-    height: 128px;
+    width: clamp(64px, 20vw, 128px);
+    height: clamp(64px, 20vw, 128px);
+    flex-shrink: 0;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
 }
 
 .logo-img {
-    width: 160px;
-    height: 160px;
+    width: clamp(80px, 25vw, 160px);
+    height: clamp(80px, 25vw, 160px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -176,12 +177,20 @@ a:hover {
 
 .social-icon {
     transition: 0.3s;
+    width: clamp(50px, 16vw, 100px);
+    height: clamp(50px, 16vw, 100px);
 }
 
 .social-strip a:hover {
     border-bottom: none;
     transform: scale(1.18);
     filter: drop-shadow(0 0 8px var(--color-link));
+}
+
+@media (max-width: 400px) {
+    .logo-circle {
+        display: none;
+    }
 }
 
 @media (max-width: 900px) {

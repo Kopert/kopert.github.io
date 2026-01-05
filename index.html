@@ -3,6 +3,7 @@
     <head>
         <title>Kopert</title>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script type="module" src="src/main.ts"></script>
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
@@ -43,14 +44,6 @@
                     <h2>Retrospectives Finished</h2>
                     <div class="game-list" id="retrospectives"></div>
                 </section>
-                <section class="panel">
-                    <h2>Dropped Due to Crashing</h2>
-                    <div class="game-list" id="dropped-crashing"></div>
-                </section>
-                <section class="panel">
-                    <h2>Dropped Due to Utter Bullshit</h2>
-                    <div class="game-list" id="dropped-bullshit"></div>
-                </section>
                 <section class="panel panel-no-list">
                     <p>
                         <a href="https://youtube.com/playlist?list=PL6RaiovQ8kYuArUMx-5-AT02jTBXmDSIQ"
@@ -64,8 +57,16 @@
                     </p>
                 </section>
                 <section class="panel panel-wide">
-                    <h2>Finished</h2>
+                    <h2>Games Finished</h2>
                     <div class="game-list" id="finished"></div>
+                </section>
+                <section class="panel">
+                    <h2>Dropped Due to Crashing</h2>
+                    <div class="game-list" id="dropped-crashing"></div>
+                </section>
+                <section class="panel">
+                    <h2>Dropped Due to Utter Bullshit</h2>
+                    <div class="game-list" id="dropped-bullshit"></div>
                 </section>
             </div>
             <footer class="copyright">Copyright © 2026 Kopert. All rights reserved.</footer>
