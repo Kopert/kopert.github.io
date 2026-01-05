@@ -1,9 +1,9 @@
 :root {
-    --color-bg: #181a20;
-    --color-panel: #23262f;
-    --color-panel-border: #2c2f3a;
+    --color-bg: #171a1f;
+    --color-panel: #22282f;
+    --color-panel-border: #2d303b;
     --color-text: #e3e7ee;
-    --color-heading: #dad7da;
+    --color-heading: #cad7ca;
     --color-link: #7af7bf;
     --color-link-hover: #a3f8df;
     --color-li-hover: #43464f;
@@ -26,12 +26,41 @@ body {
     padding: 0 1rem;
 }
 
-h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    letter-spacing: -1px;
+.title-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.title-block h1 {
+    margin: 0;
+    font-size: 3rem;
     color: var(--color-heading);
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-top: 0.5rem;
+}
+
+.logo-circle {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-img {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .panels-grid {
@@ -86,7 +115,7 @@ h1 {
     padding: 0.1rem 0.5rem;
     border-radius: 0.2rem;
     transition: 0.4s;
-    line-height: 1.5;
+    line-height: 1.3;
     background: transparent;
     color: var(--color-text);
 }
@@ -142,7 +171,7 @@ a:hover {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin: -1rem 0 2rem 0;
+    margin: 1rem;
 }
 
 .social-icon {
