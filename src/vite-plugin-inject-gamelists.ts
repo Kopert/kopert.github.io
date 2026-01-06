@@ -1,14 +1,26 @@
 import type { Plugin } from "vite";
-
-import * as gamelist from "./gamelist";
+import yaml from "yaml";
+import * as fs from "fs";
 
 export default function injectGamelists(): Plugin {
     return {
         name: "inject-gamelists",
-
+        handleHotUpdate: {
+            handler({ file, server }): void {
+                if (file.endsWith("/gamelist.yaml")) server.ws.send({ type: "full-reload" });
+            },
+        },
         transformIndexHtml: {
             handler(html: string): string {
-                function createEntryBlock(entry: gamelist.GameEntry): string {
+                interface GameEntry {
+                    title: string;
+                    playlist: string;
+                    system?: string;
+                    year?: string;
+                    video?: string;
+                    extra?: string;
+                }
+                function createEntryBlock(entry: GameEntry): string {
                     return (
                         `<li>` +
                         `<a href="${entry.video ? `https://youtu.be/${entry.video}&list=${entry.playlist}` : `https://youtube.com/playlist?list=${entry.playlist}`}">` +
@@ -24,21 +36,16 @@ export default function injectGamelists(): Plugin {
                         `</li>`
                     );
                 }
-                function createList(entries: gamelist.GameEntry[], reversed = false): string {
+                function createList(entries: GameEntry[], reversed = false): string {
                     return (
                         `<ol${reversed ? ' reversed=""' : ""}>` +
                         (reversed ? entries.slice().reverse() : entries).map(createEntryBlock).join("") +
                         `</ol>`
                     );
                 }
-                const sections = {
-                    finished: createList(gamelist.finished, true),
-                    ongoing: createList(gamelist.ongoing),
-                    droppedCrashing: createList(gamelist.droppedCrashing),
-                    droppedBullshit: createList(gamelist.droppedBullshit),
-                    retrospectives: createList(gamelist.retrospectives),
-                };
-                for (const [id, content] of Object.entries(sections)) html = html.split(`<!-- ${id} -->`).join(content);
+                const gamelist = yaml.parse(fs.readFileSync("./gamelist.yaml", "utf8"));
+                for (const [id, content] of Object.entries(gamelist))
+                    html = html.split(`<!-- ${id} -->`).join(createList(content as GameEntry[], id === "finished"));
                 return html;
             },
         },
