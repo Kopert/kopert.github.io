@@ -23,7 +23,7 @@ export default function injectGamelists(): Plugin {
                 function createEntryBlock(entry: GameEntry): string {
                     return (
                         `<li>` +
-                        `<a href="${entry.video ? `https://youtu.be/${entry.video}&list=${entry.playlist}` : `https://youtube.com/playlist?list=${entry.playlist}`}">` +
+                        `<a href="${entry.video ? `https://youtu.be/${entry.video}&list=${entry.playlist}` : `https://youtube.com/playlist?list=${entry.playlist}`}" target="_blank">` +
                         `<span class="game-title">${entry.title}</span>` +
                         (entry.system || entry.year
                             ? `<span class="game-meta">` +
