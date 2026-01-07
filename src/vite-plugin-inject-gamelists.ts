@@ -15,24 +15,31 @@ export default function injectGamelists(): Plugin {
                 interface GameEntry {
                     title: string;
                     playlist: string;
+                    video: string;
                     system?: string;
                     year?: string;
-                    video?: string;
                     extra?: string;
                 }
                 function createEntryBlock(entry: GameEntry): string {
                     return (
                         `<li>` +
                         `<a href="${entry.video ? `https://youtu.be/${entry.video}&list=${entry.playlist}` : `https://youtube.com/playlist?list=${entry.playlist}`}" target="_blank">` +
-                        `<span class="game-title">${entry.title}</span>` +
+                        `<div class="game-entry">` +
+                        `<div class="game-thumbnail-container">` +
+                        `<img class="game-thumbnail" src="https://i.ytimg.com/vi/${entry.video}/default.jpg" alt="">` +
+                        `</div>` +
+                        `<div class="game-info">` +
+                        `<div class="game-title">${entry.title}</div>` +
                         (entry.system || entry.year
-                            ? `<span class="game-meta">` +
+                            ? `<div class="game-meta">` +
                               (entry.system ? `<span class="game-meta-system">${entry.system}</span>` : "") +
                               (entry.year ? `<span class="game-meta-year">${entry.year}</span>` : "") +
-                              `</span>`
+                              `</div>`
                             : "") +
-                        `</a>` +
                         (entry.extra ? `<span class="game-extra">${entry.extra}</span>` : "") +
+                        `</div>` +
+                        `</div>` +
+                        `</a>` +
                         `</li>`
                     );
                 }
