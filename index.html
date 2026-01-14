@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <style>
+            .pending .js {
+                opacity: 0;
+            }
+            .js {
+                transition: opacity 0.1s;
+            }
+        </style>
+        <script>
+            document.documentElement.classList.add("pending");
+        </script>
         <title>Kopert</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,15 +31,47 @@
                     <div class="tagline">Games used to be good. They still are, but they used to be, too.</div>
                 </div>
             </header>
-            <nav class="social-strip" aria-label="Social links">
+            <nav class="social-list" aria-label="Social links">
                 <a href="https://twitch.tv/kopert" target="_blank">
-                    <div role="img" aria-label="Twitch channel" class="social-icon twitch-svg"></div>
+                    <div class="social-row">
+                        <div role="img" aria-label="Twitch channel" class="social-icon twitch-svg"></div>
+                        <div class="social-text">
+                            <span class="social-text-large"
+                                >Streaming most days of the week with occasional breaks.<br />
+                                <span class="js"
+                                    >The streams start around
+                                    <time class="stream-start-time js" aria-live="polite">2 AM UTC</time>!</span
+                                ></span
+                            >
+                            <span class="social-text-small js"
+                                >Streams at <time class="stream-start-time" aria-live="polite">2 AM UTC</time></span
+                            >
+                        </div>
+                    </div>
                 </a>
                 <a href="https://discord.gg/XJwdBdQZ8B" target="_blank">
-                    <div role="img" aria-label="Discord server" class="social-icon discord-svg"></div>
+                    <div class="social-row">
+                        <div role="img" aria-label="Discord server" class="social-icon discord-svg"></div>
+                        <div class="social-text">
+                            <span class="social-text-large"
+                                >Join our Discord Community for the memes!<br />
+                                You can also get stream notifications here, or contact me.</span
+                            >
+                            <span class="social-text-small">Discord Community</span>
+                        </div>
+                    </div>
                 </a>
                 <a href="https://www.youtube.com/@KopertGaming" target="_blank">
-                    <div role="img" aria-label="YouTube VOD Archives channel" class="social-icon youtube-svg"></div>
+                    <div class="social-row">
+                        <div role="img" aria-label="YouTube VOD Archives channel" class="social-icon youtube-svg"></div>
+                        <div class="social-text">
+                            <span class="social-text-large"
+                                >Watch my previous streams on our YouTube VOD archives.<br />Or, better yet, check the
+                                full game list below!</span
+                            >
+                            <span class="social-text-small">VOD Archives</span>
+                        </div>
+                    </div>
                 </a>
             </nav>
             <div class="panels-grid">

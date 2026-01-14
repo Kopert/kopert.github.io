@@ -12,6 +12,13 @@
     --color-copyright: #888;
     --color-shadow: #0005;
     --color-kopert: #8fc042;
+    --color-social-row: #12181f;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html {
@@ -60,24 +67,41 @@ html {
     background: url("./assets/kopert.svg") center / 125% no-repeat;
 }
 
-.social-strip {
+.social-list {
+    margin: 1rem auto;
+    max-width: 45rem;
+}
+
+.social-row {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 1rem;
+    gap: 1rem;
+    background-color: var(--color-social-row);
+    transition: background-color 0.4s;
+    border-radius: 10rem;
+    box-shadow: 0 0.2rem 0.8rem var(--color-shadow);
+    border: 0.1rem solid var(--color-panel-border);
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.social-row:hover {
+    background-color: var(--color-li-hover);
 }
 
 .social-icon {
-    transition: 0.3s;
-    width: clamp(3rem, 16vw, 5rem);
-    height: clamp(3rem, 16vw, 5rem);
+    width: 6rem;
+    height: 4rem;
     background: center / 100% no-repeat;
 }
 
-.social-strip a:hover {
-    border-bottom: none;
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 0.5rem var(--color-link));
+.social-text {
+    margin: auto 0;
+    font-size: 1.15rem;
+    color: var(--color-text);
+}
+
+.social-text-small {
+    display: none;
 }
 
 .twitch-svg {
@@ -87,6 +111,7 @@ html {
 .discord-svg {
     background-image: url("./assets/discord.svg");
 }
+
 .youtube-svg {
     background-image: url("./assets/youtube.svg");
 }
@@ -134,14 +159,14 @@ li a {
 .game-entry {
     padding: 0.5rem 0.5rem;
     border-radius: 0.5rem;
-    transition: 0.4s;
     display: flex;
     gap: 0.5rem;
-    background: var(--color-panel-even);
+    background-color: var(--color-panel-even);
+    transition: background-color 0.4s;
 }
 
 li:nth-child(odd) .game-entry {
-    background: var(--color-panel-odd);
+    background-color: var(--color-panel-odd);
 }
 
 .game-info {
@@ -205,7 +230,7 @@ li:nth-child(odd) .game-entry {
 a {
     color: var(--color-link);
     text-decoration: none;
-    transition: 0.4s;
+    transition: color 0.4s;
 }
 
 a:hover .game-title,
@@ -247,5 +272,18 @@ a:hover .game-title,
     ol {
         list-style-type: revert;
         padding: revert;
+    }
+    .social-icon {
+        width: 3.5rem;
+        height: 2.5rem;
+    }
+    .social-text {
+        font-size: 1rem;
+    }
+    .social-text-large {
+        display: none;
+    }
+    .social-text-small {
+        display: revert;
     }
 }
