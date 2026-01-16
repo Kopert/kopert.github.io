@@ -74,7 +74,6 @@ html {
 
 .social-row {
     display: flex;
-    gap: 1rem;
     background-color: var(--color-social-row);
     transition: background-color 0.4s;
     border-radius: 10rem;
@@ -89,15 +88,20 @@ html {
 }
 
 .social-icon {
-    width: 6rem;
-    height: 4rem;
-    background: center / 100% no-repeat;
+    width: 5rem;
+    min-height: 4rem;
+    background:
+        0 center / 105% no-repeat,
+        0 0;
+    box-shadow: 0.2rem 0 0.8rem var(--color-shadow);
+    flex-shrink: 0;
 }
 
 .social-text {
     margin: auto 0;
     font-size: 1.15rem;
     color: var(--color-text);
+    padding: 0 1rem;
 }
 
 .social-text-small {
@@ -105,15 +109,15 @@ html {
 }
 
 .twitch-svg {
-    background-image: url("./assets/twitch.svg");
+    background-image: url("./assets/twitch.svg"), linear-gradient(to bottom, #6441a5, #442185);
 }
 
 .discord-svg {
-    background-image: url("./assets/discord.svg");
+    background-image: url("./assets/discord.svg"), linear-gradient(to bottom, #5865f2, #3845d2);
 }
 
 .youtube-svg {
-    background-image: url("./assets/youtube.svg");
+    background-image: url("./assets/youtube.svg"), linear-gradient(to bottom, #ff0000, #990000);
 }
 
 .panels-grid {
@@ -275,7 +279,7 @@ a:hover .game-title,
     }
     .social-icon {
         width: 3.5rem;
-        height: 2.5rem;
+        min-height: 2.5rem;
     }
     .social-text {
         font-size: 1rem;
