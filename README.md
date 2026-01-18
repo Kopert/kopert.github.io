@@ -1,4 +1,4 @@
-![Deploy Status](https://github.com/Kopert/homepage/actions/workflows/deploy.yml/badge.svg)
+![Deploy Status](https://github.com/Kopert/kopert.github.io/actions/workflows/deploy.yml/badge.svg)
 
 # Kopert Homepage
 
