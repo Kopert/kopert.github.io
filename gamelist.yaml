@@ -1244,12 +1244,12 @@ finished:
       video: "AZhsja-WUyk"
       system: "TurboGrafx CD"
       year: "1994"
-ongoing:
     - title: "Illusion City: Gen'ei Toshi"
       playlist: "PL6RaiovQ8kYvLkF4e-Lp5NxxmorgBt983"
       video: "Mvp2sWklkJY"
       system: "MSX"
       year: "1991"
+ongoing:
 retrospectives:
     - title: "Wolf 3D Engine"
       playlist: "PL6RaiovQ8kYvgL5wncWGCG2_yrnLl35XF"

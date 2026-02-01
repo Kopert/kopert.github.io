@@ -44,6 +44,7 @@ export default function injectGamelists(): Plugin {
                     );
                 }
                 function createList(entries: GameEntry[], reversed = false): string {
+                    if (!entries) return "";
                     return (
                         `<ol${reversed ? ' reversed=""' : ""}>` +
                         (reversed ? entries.slice().reverse() : entries).map(createEntryBlock).join("") +

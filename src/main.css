@@ -126,6 +126,10 @@ html {
     gap: 2rem;
 }
 
+.panel:not(:has(ol)) {
+    display: none;
+}
+
 .panel {
     background: var(--color-panel);
     border-radius: 1rem;
