@@ -1249,12 +1249,12 @@ finished:
       video: "Mvp2sWklkJY"
       system: "MSX"
       year: "1991"
-ongoing:
     - title: "The Dark Heart of Uukrul"
       playlist: "PL6RaiovQ8kYvCjXcvKDX-RvLjTFyyXG4Z"
       video: "RVfwN6Dclys"
       system: "DOS"
       year: "1990"
+ongoing:
 retrospectives:
     - title: "Wolf 3D Engine"
       playlist: "PL6RaiovQ8kYvgL5wncWGCG2_yrnLl35XF"
