@@ -1255,6 +1255,11 @@ finished:
       system: "DOS"
       year: "1990"
 ongoing:
+    - title: "Rock of Ages"
+      playlist: "PL6RaiovQ8kYuN1AouBd4r_2T0N-JhkEVg"
+      video: "tMrkIWWURnw"
+      system: "PC"
+      year: "2011"
 retrospectives:
     - title: "Wolf 3D Engine"
       playlist: "PL6RaiovQ8kYvgL5wncWGCG2_yrnLl35XF"
