@@ -1260,6 +1260,11 @@ finished:
       system: "PC"
       year: "2011"
 ongoing:
+    - title: "Madō Monogatari I"
+      playlist: "PL6RaiovQ8kYvnuRPNekYbpUis7YLXGrE1"
+      video: "FLlcihjl5m8"
+      system: "Genesis"
+      year: "1996"
 retrospectives:
     - title: "Wolf 3D Engine"
       playlist: "PL6RaiovQ8kYvgL5wncWGCG2_yrnLl35XF"
