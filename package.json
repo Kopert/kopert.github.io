@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-        "check": "eslint . && prettier . --check",
+        "check": "eslint . && tsc --noEmit && prettier . --check",
         "fix": "eslint . --fix && prettier . --w",
         "dev": "vite",
         "build": "npm run check && vite build"
