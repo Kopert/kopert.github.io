@@ -4,21 +4,22 @@
     "type": "module",
     "scripts": {
         "check": "eslint . && tsc --noEmit && prettier . --check",
-        "fix": "eslint . --fix && prettier . --w",
+        "fix": "eslint . --fix && prettier . --write",
         "dev": "vite",
-        "build": "npm run check && vite build"
+        "build": "npm run check && vite build",
+        "preview": "npm run build && vite preview"
     },
     "devDependencies": {
-        "@types/node": "^25.5.2",
-        "eslint": "^10.2.0",
+        "@types/node": "^25.6.0",
+        "eslint": "^10.2.1",
         "eslint-config-prettier": "^10.1.8",
         "jiti": "^2.6.1",
-        "prettier": "^3.8.1",
+        "prettier": "^3.8.3",
         "tsx": "^4.21.0",
-        "typescript-eslint": "^8.58.0",
-        "vite": "^7.3.1",
+        "typescript-eslint": "^8.58.2",
+        "vite": "^8.0.9",
         "vite-plugin-html-minifier": "^1.0.5",
-        "vite-plugin-singlefile": "^2.3.2",
+        "vite-plugin-singlefile": "^2.3.3",
         "yaml": "^2.8.3"
     }
 }
