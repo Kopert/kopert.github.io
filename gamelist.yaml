@@ -1305,6 +1305,11 @@ finished:
       system: "Windows"
       year: "1993"
 ongoing:
+    - title: "Götzendiener"
+      playlist: "PL6RaiovQ8kYtoS764Swte-GELkySP8hQd"
+      video: "s7b3vcJBQv4"
+      system: "TurboGrafx CD"
+      year: "1994"
 retrospectives:
     - title: "Wolf 3D Engine"
       playlist: "PL6RaiovQ8kYvgL5wncWGCG2_yrnLl35XF"
