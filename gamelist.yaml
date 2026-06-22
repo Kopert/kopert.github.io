@@ -1309,12 +1309,12 @@ finished:
       video: "s7b3vcJBQv4"
       system: "TurboGrafx CD"
       year: "1994"
-ongoing:
     - title: Wolfenstein RPG
       playlist: "PL6RaiovQ8kYvSLdSN_vf3TQnfbVYkv_W2"
       video: "dO620jZF22E"
       system: "Mobile"
       year: "2008"
+ongoing:
 retrospectives:
     - title: "Wolf 3D Engine"
       playlist: "PL6RaiovQ8kYvgL5wncWGCG2_yrnLl35XF"
