@@ -1335,6 +1335,11 @@ finished:
       system: "Genesis"
       year: "1993"
 ongoing:
+    - title: "SimCopter"
+      playlist: "PLHfC7kg7shU8"
+      video: "-JEOqc_rUQA"
+      system: "Windows"
+      year: "1996"
 retrospectives:
     - title: "Wolf 3D Engine"
       playlist: "PL6RaiovQ8kYvgL5wncWGCG2_yrnLl35XF"
