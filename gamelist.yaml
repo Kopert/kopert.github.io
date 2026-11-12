@@ -1375,6 +1375,11 @@ finished:
       system: "SNES"
       year: "1994"
 ongoing:
+    - title: "Cyber Doll"
+      playlist: "PLKPBUQMNNkvs"
+      video: "pUw3PYbGpOo"
+      system: "Saturn"
+      year: "1996"
 retrospectives:
     - title: "Wolf 3D Engine"
       playlist: "PL6RaiovQ8kYvgL5wncWGCG2_yrnLl35XF"
